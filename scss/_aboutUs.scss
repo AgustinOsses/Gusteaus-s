@@ -1,0 +1,36 @@
+.about-us {
+	@include layout-flex;
+	height: 70vh;
+	justify-content: space-between;
+	&-left {
+		@include layout-flex-column;
+		width: 50%;
+	}
+	&-right {
+		@include layout-flex-column;
+		width: 50%;
+		.main-heading {
+			font-family: $font-dancingScript;
+			color: map-get($colors, details);
+			font-size: 5rem;
+		}
+		.sub-heading {
+			font-family: $font-josefineSans;
+			color: map-get($colors, secondary);
+		}
+		.description {
+			text-align: center;
+			font-family: $font-nunito;
+			color: map-get($colors, secondary);
+		}
+		.stars {
+			margin: 2rem 0;
+			.fa-star-of-life {
+				color: map-get($colors, details);
+			}
+		}
+		.main-btn {
+			@include btn;
+		}
+	}
+}

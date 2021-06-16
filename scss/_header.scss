@@ -1,0 +1,55 @@
+.header {
+	@include layout-flex-column;
+	background: url(../images/bg.jpeg) no-repeat;
+	justify-content: space-evenly;
+	background-size: cover;
+	height: 88vh;
+	&-banner {
+		@include layout-flex-column;
+		.main-heading {
+			color: map-get($colors, details);
+			font-family: $font-dancingScript;
+			font-size: 8rem;
+			margin: 0;
+		}
+		.sub-heading {
+			color: map-get($colors, details);
+			font-family: $font-josefineSans;
+		}
+		.main-btn {
+			@include btn;
+		}
+	}
+}
+
+.brand {
+	@include layout-flex-column;
+}
+
+.logo {
+	@include layout-flex;
+	padding: 1rem;
+	border: 5px solid map-get($colors, secondary);
+	width: 12rem;
+	height: 12rem;
+	border-radius: 50%;
+	font-size: 7rem;
+	color: map-get($colors, secondary);
+}
+
+.name {
+	@include layout-flex-column;
+	.main-name {
+		color: map-get($colors, secondary);
+		font-family: $font-dancingScript;
+		font-family: $font-nunito;
+		font-size: 2rem;
+		margin: 0;
+	}
+	.sub-name {
+		color: map-get($colors, secondary);
+		font-family: $font-nunito;
+		font-size: 1rem;
+		margin: 0;
+	}
+}

@@ -1,0 +1,36 @@
+.footer {
+	@include layout-flex;
+	justify-content: space-around;
+	&-header {
+		@include layout-flex-column;
+		padding: 3rem 0;
+		.name-wrapper {
+			@include layout-flex-column;
+			.main-name,
+			.sub-name {
+				display: none;
+				color: map-get($colors, details);
+			}
+		}
+	}
+	&-copyright-paragraph {
+		color: map-get($colors, secondary);
+	}
+}
+
+.social-media {
+	@include layout-flex;
+	justify-content: space-between;
+	width: 20rem;
+	&-item {
+		list-style: none;
+	}
+	&-link {
+		color: map-get($colors, secondary);
+		font-size: 3rem;
+		&:hover {
+			transition: ease 1s;
+			color: rgba(map-get($colors, details), 0.5);
+		}
+	}
+}

@@ -1,0 +1,29 @@
+.navbar {
+	width: 100%;
+	&-navigation {
+		@include layout-flex;
+		height: 5rem;
+		background-color: map-get($colors, primary);
+		&-right {
+			width: 50%;
+		}
+	}
+}
+
+.nav-list {
+	display: flex;
+	justify-content: space-between;
+	&-item {
+		list-style: none;
+	}
+	&-link {
+		font-size: 1.1rem;
+		font-family: $font-nunito;
+		color: map-get($colors, secondary);
+		text-decoration: none;
+		&:hover {
+			transition: ease 1s;
+			color: rgba(map-get($colors, details), 0.5);
+		}
+	}
+}
